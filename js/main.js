@@ -21,8 +21,13 @@ document.addEventListener('DOMContentLoaded', function () {
     navLinks.forEach(function (link) {
       var href = link.getAttribute('href');
       if (!href) return;
-      // Compare by filename only
-      var linkFile = href.split('/').pop();
+
+      // Remove any hash from href (e.g., 'index.html#about' -> 'index.html') and treat empty as index
+      var linkPath = href.split('#')[0];
+      if (!linkPath || linkPath === '') linkPath = 'index.html';
+      // Compare the base filename
+      var linkFile = linkPath.split('/').pop();
+
       if (linkFile === path) {
         link.classList.add('active');
       } else {

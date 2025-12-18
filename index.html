@@ -10,12 +10,12 @@
 <body>
   <!-- Header with navigation -->
   <header>
-    <!-- Primary navigation. Active link is managed by `js/main.js` to avoid duplicating state across pages. -->
+    <!-- Primary navigation. Links point to anchors on the single-page site. -->
     <nav aria-label="Primary navigation">
       <ul class="nav-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
       </ul>
     </nav>
   </header>
@@ -23,7 +23,7 @@
   <!-- Main content -->
   <main>
     <!-- Hero / Profile section -->
-    <section class="hero">
+    <section id="home" class="hero">
       <!-- Profile image placeholder (svg used for a lightweight placeholder that scales well) -->
       <img src="images/profile.svg" alt="Profile picture" class="profile-image">
 
@@ -37,10 +37,60 @@
       </article>
     </section>
 
-    <!-- Quick links to projects (optional) -->
-    <section class="projects-preview">
-      <h2>Some of my projects</h2>
-      <p>Check out my <a href="projects.html">projects page</a> to see what I'm working on.</p>
+    <!-- About section (moved from about.html) -->
+    <section id="about" class="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Me</h2>
+      <p>
+        I am an Information Systems student learning web development. I study the intersection of
+        technology, data, and business processes and I'm building practical skills in front-end
+        development to create accessible and responsive user interfaces.
+      </p>
+
+      <!-- Skills list -->
+      <div class="skills" aria-labelledby="skills-heading">
+        <h3 id="skills-heading">Skills</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>GitHub (version control)</li>
+          <li>Basic JavaScript</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects section (full list) -->
+    <section id="projects" class="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+
+      <!-- Project 1 -->
+      <article class="project" aria-labelledby="project1-title">
+        <h3 id="project1-title">Project 1: Simple Portfolio</h3>
+        <img src="images/project1.svg" alt="Screenshot of Project 1: Simple Portfolio" class="project-image">
+        <p>
+          A simple, responsive portfolio website built with HTML, CSS, and a bit of JavaScript to showcase
+          work and practice accessible layout techniques.
+        </p>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project" aria-labelledby="project2-title">
+        <h3 id="project2-title">Project 2: Todo List App</h3>
+        <img src="images/project2.svg" alt="Screenshot of Project 2: Todo List App" class="project-image">
+        <p>
+          A small todo list application that demonstrates DOM manipulation and basic state management
+          using plain JavaScript. Features add, remove, and mark-complete functionality.
+        </p>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project" aria-labelledby="project3-title">
+        <h3 id="project3-title">Project 3: Weather Dashboard</h3>
+        <img src="images/project3.svg" alt="Screenshot of Project 3: Weather Dashboard" class="project-image">
+        <p>
+          A weather dashboard that fetches data from a public API and displays current conditions and
+          a short forecast — a practice project for working with APIs and async JavaScript.
+        </p>
+      </article>
     </section>
   </main>
 

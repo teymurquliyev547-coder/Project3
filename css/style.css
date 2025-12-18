@@ -5,6 +5,7 @@
 /* Reset and base styles */
 * { box-sizing: border-box; }
 html, body { height: 100%; }
+html { scroll-behavior: smooth; } /* smooth in-page scrolling for anchor links */
 body {
   margin: 0;
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
@@ -26,9 +27,10 @@ header {
 .nav-list {
   list-style: none;
   margin: 0;
-  padding: 0.5rem 1rem;
+  padding: 1rem;
   display: flex;
-  gap: 1rem;
+  flex-direction: column; /* stack nav links vertically for single-column layout */
+  gap: 0.75rem;
   align-items: center;
 }
 
@@ -52,9 +54,10 @@ main {
 
 .hero {
   display: grid;
-  grid-template-columns: 120px 1fr;
+  grid-template-columns: 1fr; /* single column layout */
   gap: 1rem;
   align-items: center;
+  text-align: center;
   background: #ffffff;
   padding: 1rem;
   border-radius: 8px;
@@ -63,13 +66,15 @@ main {
 
 .profile-image {
   width: 100%;
-  max-width: 120px;
+  max-width: 140px;
   height: auto;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid #e6e9ef;
+  margin: 0 auto;
 }
 
+.intro { text-align: center; }
 .intro h1 { margin: 0 0 0.5rem 0; font-size: 1.4rem; }
 .intro p { margin: 0; color: #444; }
 
@@ -81,8 +86,10 @@ main {
   border: 1px solid #eef1f6;
 }
 
-.project { display: grid; grid-template-columns: 160px 1fr; gap: 1rem; align-items: start; }
-.project-image { width: 100%; max-width: 160px; border-radius: 6px; background: #eee; display:block; }
+.project { display: grid; grid-template-columns: 1fr; gap: 1rem; align-items: start; text-align: center; }
+.project-image { width: 100%; max-width: 480px; border-radius: 6px; background: #eee; display:block; margin: 0 auto; }
+.project h2 { margin-top: 0; }
+.project p { margin: 0; color: #444; }
 
 /* Footer */
 footer {
@@ -95,11 +102,11 @@ footer {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  /* Layout: stack hero and project columns */
-  .hero, .project { grid-template-columns: 1fr; text-align: left; }
+  /* Layout: keep single-column and center text */
+  .hero, .project { grid-template-columns: 1fr; text-align: center; }
 
-  /* Navigation: vertical stack for small screens */
-  .nav-list { flex-direction: column; align-items: stretch; gap: 0.5rem; padding: 0.75rem 1rem; }
+  /* Navigation is vertical by default; ensure spacing on small screens */
+  .nav-list { gap: 0.5rem; padding: 0.75rem 1rem; }
   .nav-list a { display: block; text-align: center; }
 
   /* Center project images on narrow screens */
