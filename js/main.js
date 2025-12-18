@@ -3,6 +3,9 @@
 // - Adds `active` class to the current nav link based on URL
 
 document.addEventListener('DOMContentLoaded', function () {
+  // Minimal confirmation for debugging
+  console.log('Site loaded — portfolio initialized');
+
   // Set year in footer
   var yearEl = document.getElementById('year');
   if (yearEl) {
