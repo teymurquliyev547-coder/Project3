@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400" role="img" aria-label="Project 3 placeholder">
+  <rect width="100%" height="100%" fill="#f0fbff"/>
+  <rect x="30" y="30" width="540" height="340" rx="8" fill="#eaf9ff" stroke="#cfeef8" stroke-width="2"/>
+  <text x="300" y="220" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#3a6b7b" text-anchor="middle">Weather Dashboard Screenshot</text>
+</svg>
