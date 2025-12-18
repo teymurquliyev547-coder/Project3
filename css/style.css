@@ -5,7 +5,7 @@
 /* Reset and base styles */
 * { box-sizing: border-box; }
 html, body { height: 100%; }
-html { scroll-behavior: smooth; } /* smooth in-page scrolling for anchor links */
+html { scroll-behavior: smooth; scroll-padding-top: 80px; } /* smooth in-page scrolling for anchor links and offset for sticky header */
 body {
   margin: 0;
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
@@ -19,10 +19,26 @@ a { color: #0366d6; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 /* Header / Navigation */
-header {
+.site-header, header {
   background: #ffffff;
   border-bottom: 1px solid #e6e9ef;
 }
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #ffffff;
+}
+.brand-name {
+  font-weight: 700;
+  color: #222;
+  text-decoration: none;
+}
+.brand { display:flex; align-items:center; gap:0.5rem; }
 
 .nav-list {
   list-style: none;
@@ -45,6 +61,19 @@ header {
   color: white;
 }
 
+/* Make nav horizontal on wider screens while keeping the single-column layout on mobile */
+@media (min-width: 480px) {
+  .nav-list { flex-direction: row; gap: 1rem; }
+  .nav-list a { display: inline-block; padding: 0.35rem 0.6rem; }
+  .site-header { justify-content: space-between; }
+
+  /* Hero: place profile image to the left of intro on wider screens */
+  .hero { grid-template-columns: 160px 1fr; text-align: left; align-items: center; gap: 2.5rem; }
+  .intro { text-align: left; justify-self: start; }
+  /* Left-align profile image on wide screens */
+  .profile-image { max-width: 160px; margin: 0; }
+} 
+
 /* Main layout */
 main {
   max-width: 900px;
@@ -65,13 +94,20 @@ main {
 }
 
 .profile-image {
-  width: 100%;
-  max-width: 140px;
-  height: auto;
+  width: 140px;
+  height: 140px; /* fixed square makes perfect circle with border-radius:50% */
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid #e6e9ef;
-  margin: 0 auto;
+  margin: 0; /* align to the left */
+  justify-self: start; /* ensure the image sits at the left of the grid cell */
+  align-self: center; /* vertically center within the hero area */
+  margin-right: 2rem; /* increased gap between image and text */
+}
+
+/* On very small screens, ensure the image doesn't overflow the container */
+@media (max-width: 360px) {
+  .profile-image { width: 120px; height: 120px; margin-right: 0.5rem; }
 }
 
 .intro { text-align: center; }
