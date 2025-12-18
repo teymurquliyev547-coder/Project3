@@ -114,8 +114,17 @@ footer {
 /* Ensure images scale properly */
 img { max-width: 100%; height: auto; display: block; }
 
-/* Small utilities */
-.container { max-width: 900px; margin: 0 auto; }
+/* Footer social links (consistent across pages) */
+.social-links {
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+.social-links a { color: #0366d6; margin: 0 0.5rem; }
+
+@media (max-width: 768px) {
+  .social-links { text-align: center; }
+}
 
 /* Accessibility focus state */
 a:focus { outline: 3px solid rgba(3,102,214,0.25); outline-offset: 2px; }

@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Highlight the current nav link
+  // NOTE: the `active` class is applied here so it is not duplicated in the HTML markup.
   try {
     var navLinks = document.querySelectorAll('nav a');
     var path = window.location.pathname.split('/').pop() || 'index.html';
