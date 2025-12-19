@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
   <!-- Header with navigation -->
@@ -38,14 +40,14 @@
 
       <!-- Short introduction about the student (text on the right of the photo) -->
       <article class="intro">
-        <h1>Hi — I'm <strong>Teymur Guliyev</strong>, a web development student 👋</h1>
+        <h1>Hi — I'm <strong>Teymur Guliyev</strong>, an Information Technologies student at ADA University 👋</h1>
         <p>
-          I'm learning HTML, CSS, and JavaScript while building small projects to improve my skills.
-          I enjoy creating clean, accessible interfaces and experimenting with new web technologies.
+          I'm a university student learning web development and programming. I'm curious about how systems, networks, and security work, and I'm exploring cybersecurity to understand the basics.
         </p>
         <div class="hero-links" aria-label="Primary profiles">
-          <a class="pill" href="https://www.codecademy.com/profiles/core3409390524" target="_blank" rel="noopener noreferrer">Codecademy</a>
-          <a class="pill" href="https://github.com/teymurquliyev547-coder" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="pill pill-codecademy" href="https://www.codecademy.com/profiles/Teymur.17" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-code" aria-hidden="true"></i> Codecademy</a>
+          <a class="pill pill-github" href="https://github.com/teymurquliyev547-coder" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+          <a class="pill pill-linkedin" href="https://www.linkedin.com/in/teymur-quliyev-a11a87378/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
         </div>
       </article>
     </section>
@@ -53,19 +55,27 @@
     <!-- About section (moved from about.html) -->
     <section id="about" class="about" aria-labelledby="about-heading">
       <h2 id="about-heading">About Me</h2>
-      <p>Hi, I'm Teymur Guliyev, an ADA University Information Systems student taking SITE 1101. I'm building a basic understanding of how computers and software work.</p>
-      <p>I'm learning programming, web development, information systems concepts, logic, and simple algorithms. In this course I worked on both team and individual projects, which helped me practice problem-solving and collaboration.</p>
-      <p>I built this website using HTML, CSS, and JavaScript. I used VS Code / Cursor AI and GitHub to develop and host it as my personal portfolio, and I'm motivated to keep improving my technical skills.</p>
+      <p class="about-highlight">Information Systems student • Learning CyberSecurity</p>
 
-      <!-- Skills list -->
-      <div class="skills" aria-labelledby="skills-heading">
-        <h3 id="skills-heading">Skills</h3>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>GitHub (version control)</li>
-          <li>Basic JavaScript</li>
-        </ul>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Hi, I’m Teymur Guliyev, an Information Systems student at ADA University currently taking SITE 1101. I’m building a strong foundation in how computers, software, and information systems work, with a clear focus on cybersecurity.</p>
+          <p>My main interest is cybersecurity, and I’m especially curious about how systems, networks, and security mechanisms protect data and digital infrastructure. Through this course, I’ve been learning programming, web development, logic, and basic algorithms, and I’ve worked on both team and individual projects that strengthened my problem-solving and collaboration skills.</p>
+          <p>Alongside my technical studies, I’m currently learning Python and studying Chinese as an additional language. I enjoy expanding my skills both in technology and communication.</p>
+          <p>I built this website using HTML, CSS, and JavaScript. I used VS Code and GitHub for development and version control, and this site serves as my personal portfolio as I continue developing my cybersecurity knowledge and technical skills.</p>
+        </div>
+
+        <div class="skills card" aria-labelledby="skills-heading">
+          <h3 id="skills-heading">Skills</h3>
+          <ul class="skill-tags">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>GitHub</li>
+            <li>JavaScript (basic)</li>
+            <li>Python</li>
+            <li>Chinese (basic)</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -73,26 +83,54 @@
     <section id="projects" class="projects" aria-labelledby="projects-heading">
       <h2 id="projects-heading">Projects</h2>
 
-      <!-- Project 1 -->
-      <article class="project" aria-labelledby="project1-title">
-        <h3 id="project1-title">SITE 1101 Team Project – Logic Gates</h3>
-        <p>We built NOT, AND, and OR logic gates on breadboards using transistors, resistors, LEDs, and a power supply. This project helped me understand how basic computer hardware works at a low level. I practiced teamwork and explained our results in a short demo video.</p>
-        <img src="images/project1foto.jpeg" alt="Logic Gates project photo" class="project-image">
-      </article>
+      <div class="projects-grid">
+        <!-- Project card 1 -->
+        <div class="project-card">
+          <h3>SITE 1101 Team Project – Logic Gates</h3>
+          <p>
+            We built NOT, AND, OR, NAND, and XOR logic gates on breadboards using transistors, resistors,
+            LEDs, and a power supply. This project helped me understand how basic computer
+            hardware works at a low level and practice teamwork.
+          </p>
+          <img src="images/project1foto.jpeg" alt="Logic Gates project">
+          <div class="project-tags">
+            <span>HTML</span>
+            <span>Teamwork</span>
+            <span>Hardware</span>
+          </div>
+        </div>
 
-      <!-- Project 2 -->
-      <article class="project" aria-labelledby="project2-title">
-        <h3 id="project2-title">SITE 1101 Team Project – Hour of Code</h3>
-        <p>Our team organized an Hour of Code (Hour of AI) event for our local community. I taught simple programming ideas and algorithmic thinking to beginners. I learned communication, teamwork, and how a small tech activity can make a positive impact.</p>
-        <img src="images/project12foto.jpeg" alt="Hour of Code event photo" class="project-image">
-      </article>
+        <!-- Project card 2 -->
+        <div class="project-card">
+          <h3>SITE 1101 Team Project – Hour of Code</h3>
+          <p>
+            Our team organized an Hour of Code (Hour of AI) event for the community. I taught
+            simple programming ideas and algorithmic thinking to beginners and practiced
+            communication and collaboration.
+          </p>
+          <img src="images/project12foto.jpeg" alt="Hour of Code event">
+          <div class="project-tags">
+            <span>Community</span>
+            <span>Teaching</span>
+            <span>Algorithms</span>
+          </div>
+        </div>
 
-      <!-- Project 3 -->
-      <article class="project" aria-labelledby="project3-title">
-        <h3 id="project3-title">SITE 1101 Individual Project – Personal Website</h3>
-        <p>I designed and developed a personal portfolio website using HTML, CSS, and JavaScript. I used VS Code/Cursor AI and GitHub, and hosted the site on GitHub Pages. I learned web development basics, Git workflow, and how AI can support coding.</p>
-        <img src="images/project3.svg" alt="Personal website project placeholder image" class="project-image">
-      </article>
+        <!-- Project card 3 -->
+        <div class="project-card">
+          <h3>SITE 1101 Individual Project – Personal Website</h3>
+          <p>
+            I designed a personal portfolio using HTML, CSS, and JavaScript, developed in VS Code
+            and hosted with GitHub. I learned web basics and Git workflow while building this site.
+          </p>
+          <img src="images/project3.svg" alt="Personal website project">
+          <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Contact section -->
@@ -100,26 +138,24 @@
       <h2 id="contact-heading">Contact</h2>
       <p>If you’d like to reach out, here are the best places to find me:</p>
       <ul class="contact-links">
-        <li><a href="https://github.com/teymurquliyev547-coder" target="_blank" rel="noopener noreferrer">GitHub</a> — my code and projects</li>
-        <li><a href="https://www.codecademy.com/profiles/core3409390524" target="_blank" rel="noopener noreferrer">Codecademy</a> — my learning profile</li>
-        <li><a href="https://www.instagram.com/qlyvtm" target="_blank" rel="noopener noreferrer">Instagram</a> — updates and quick messages</li>
-        <li><a href="mailto:teymurquliyev547@gmail.com">teymurquliyev547@gmail.com</a> — email</li>
-        <li><a href="tel:+994513080617">+994 51 308 06 17</a> — phone</li>
+        <li><a href="https://www.instagram.com/qlyvtm" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i> Instagram</a> — updates and quick messages</li>
+        <li><a href="mailto:teymurquliyev547@gmail.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i> teymurquliyev547@gmail.com</a> — email</li>
+        <li><a href="tel:+994513080617"><i class="fa-solid fa-phone" aria-hidden="true"></i> +994 51 308 06 17</a> — phone</li>
       </ul>
     </section>
   </main>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; <span id="year"></span> Vüsü | Built for SITE 1101</p>
+    <p>&copy; <span id="year"></span> Teymur Guliyev | Built for SITE 1101</p>
     <p class="social-links">
-      <a href="https://github.com/teymurquliyev547-coder" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://github.com/teymurquliyev547-coder" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
       &middot;
-      <a href="https://github.com/teymurquliyev547-coder/portfolio" target="_blank" rel="noopener noreferrer">Website repository</a>
+      <a href="https://github.com/teymurquliyev547-coder/portfolio" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-code-branch" aria-hidden="true"></i> Website repository</a>
       &middot;
-      <a href="https://www.codecademy.com/profiles/core3409390524" target="_blank" rel="noopener noreferrer">Codecademy</a>
+      <a href="https://www.codecademy.com/profiles/Teymur.17" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-code" aria-hidden="true"></i> Codecademy</a>
       &middot;
-      <a href="https://www.instagram.com/qlyvtm" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.instagram.com/qlyvtm" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i> Instagram</a>
     </p>
   </footer>
 
