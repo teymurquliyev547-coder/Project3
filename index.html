@@ -6,6 +6,9 @@
   <title>Personal Portfolio</title>
   <!-- Link to project stylesheet -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Header with navigation -->
@@ -21,6 +24,7 @@
         <li><a href="index.html#home">Home</a></li>
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -45,11 +49,9 @@
     <!-- About section (moved from about.html) -->
     <section id="about" class="about" aria-labelledby="about-heading">
       <h2 id="about-heading">About Me</h2>
-      <p>
-        I am an Information Systems student learning web development. I study the intersection of
-        technology, data, and business processes and I'm building practical skills in front-end
-        development to create accessible and responsive user interfaces.
-      </p>
+      <p>Hi, I'm Teymur Guliyev, a first-year Information Systems student taking SITE 1101. I'm building a basic understanding of how computers and software work.</p>
+      <p>I'm learning programming, web development, information systems concepts, logic, and simple algorithms. In this course I worked on both team and individual projects, which helped me practice problem-solving and collaboration.</p>
+      <p>I built this website using HTML, CSS, and JavaScript. I used VS Code / Cursor AI and GitHub to develop and host it as my personal portfolio, and I'm motivated to keep improving my technical skills.</p>
 
       <!-- Skills list -->
       <div class="skills" aria-labelledby="skills-heading">
@@ -69,46 +71,47 @@
 
       <!-- Project 1 -->
       <article class="project" aria-labelledby="project1-title">
-        <h3 id="project1-title">Project 1: Simple Portfolio</h3>
-        <img src="images/project1.svg" alt="Screenshot of Project 1: Simple Portfolio" class="project-image">
-        <p>
-          A simple, responsive portfolio website built with HTML, CSS, and a bit of JavaScript to showcase
-          work and practice accessible layout techniques.
-        </p>
+        <h3 id="project1-title">SITE 1101 Team Project – Logic Gates</h3>
+        <p>We built NOT, AND, and OR logic gates on breadboards using transistors, resistors, LEDs, and a power supply. This project helped me understand how basic computer hardware works at a low level. I practiced teamwork and explained our results in a short demo video.</p>
+        <img src="images/project1foto.jpeg" alt="Logic Gates project photo" class="project-image">
       </article>
 
       <!-- Project 2 -->
       <article class="project" aria-labelledby="project2-title">
-        <h3 id="project2-title">Project 2: Todo List App</h3>
-        <img src="images/project2.svg" alt="Screenshot of Project 2: Todo List App" class="project-image">
-        <p>
-          A small todo list application that demonstrates DOM manipulation and basic state management
-          using plain JavaScript. Features add, remove, and mark-complete functionality.
-        </p>
+        <h3 id="project2-title">SITE 1101 Team Project – Hour of Code</h3>
+        <p>Our team organized an Hour of Code (Hour of AI) event for our local community. I taught simple programming ideas and algorithmic thinking to beginners. I learned communication, teamwork, and how a small tech activity can make a positive impact.</p>
+        <img src="images/project12foto.jpeg" alt="Hour of Code event photo" class="project-image">
       </article>
 
       <!-- Project 3 -->
       <article class="project" aria-labelledby="project3-title">
-        <h3 id="project3-title">Project 3: Weather Dashboard</h3>
-        <img src="images/project3.svg" alt="Screenshot of Project 3: Weather Dashboard" class="project-image">
-        <p>
-          A weather dashboard that fetches data from a public API and displays current conditions and
-          a short forecast — a practice project for working with APIs and async JavaScript.
-        </p>
+        <h3 id="project3-title">SITE 1101 Individual Project – Personal Website</h3>
+        <p>I designed and developed a personal portfolio website using HTML, CSS, and JavaScript. I used VS Code/Cursor AI and GitHub, and hosted the site on GitHub Pages. I learned web development basics, Git workflow, and how AI can support coding.</p>
+        <img src="images/project3.svg" alt="Personal website project placeholder image" class="project-image">
       </article>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact" class="about" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <p>If you’d like to reach out, here are the best places to find me:</p>
+      <ul class="contact-links">
+        <li><a href="https://github.com/teymurquliyev547-coder" target="_blank" rel="noopener noreferrer">GitHub</a> — my code and projects</li>
+        <li><a href="https://www.codecademy.com/profiles/core3409390524" target="_blank" rel="noopener noreferrer">Codecademy</a> — my learning profile</li>
+        <li><a href="tel:+994513080617">+994 51 308 06 17</a> — phone</li>
+      </ul>
     </section>
   </main>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; <span id="year"></span> My Portfolio — Built while learning web development.</p>
-    <!-- Social links: GitHub profile, website repo, and Codecademy (placeholder) -->
+    <p>&copy; <span id="year"></span> Vüsü | Built for SITE 1101</p>
     <p class="social-links">
       <a href="https://github.com/teymurquliyev547-coder" target="_blank" rel="noopener noreferrer">GitHub</a>
       &middot;
       <a href="https://github.com/teymurquliyev547-coder/portfolio" target="_blank" rel="noopener noreferrer">Website repository</a>
       &middot;
-      <a href="#" target="_blank" rel="noopener noreferrer">Codecademy</a>
+      <a href="https://www.codecademy.com/profiles/core3409390524" target="_blank" rel="noopener noreferrer">Codecademy</a>
     </p>
   </footer>
 
