@@ -74,9 +74,11 @@ a:hover { text-decoration: underline; }
   margin: 0;
   padding: 1rem;
   display: flex;
-  flex-direction: column; /* stack nav links vertically for single-column layout */
+  flex-direction: row; /* keep nav links horizontal */
   gap: 0.75rem;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .nav-list a {
@@ -569,9 +571,9 @@ footer {
   }
 
   /* Layout: keep single-column and center text */
-  .hero, .project { grid-template-columns: 1fr; text-align: center; }
-
-  /* Navigation is vertical by default; ensure spacing on small screens */
+  .hero, .projec- keep horizontal on mobile with smaller buttons */
+  .nav-list { gap: 0.4rem; padding: 0.5rem 0.75rem; flex-wrap: wrap; }
+  .nav-list a { display: inline-flex; text-align: center; font-size: 0.85rem; padding: 0.45rem 0.7remcing on small screens */
   .nav-list { gap: 0.5rem; padding: 0.75rem 1rem; }
   .nav-list a { display: block; text-align: center; }
 
