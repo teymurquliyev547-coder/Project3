@@ -37,4 +37,28 @@ document.addEventListener('DOMContentLoaded', function () {
   } catch (e) {
     // no-op: fail silently on older browsers
   }
+
+  // Sticky header enhancement - add shadow on scroll
+  var header = document.querySelector('.site-header');
+  if (header) {
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  }
+
+  // Floating nav appears after scrolling down
+  var floatingNav = document.getElementById('floatingNav');
+  if (floatingNav) {
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 250) {
+        floatingNav.classList.add('show');
+      } else {
+        floatingNav.classList.remove('show');
+      }
+    });
+  }
 });
