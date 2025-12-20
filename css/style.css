@@ -190,6 +190,33 @@ main {
 /* On very small screens, ensure the image doesn't overflow the container */
 @media (max-width: 360px) {
   .profile-image { width: 120px; height: 120px; margin-right: 0.5rem; }
+  
+  /* Extra small screen adjustments */
+  .about {
+    padding: 1rem;
+  }
+
+  .about h2 {
+    font-size: 1.4rem;
+  }
+
+  .future-card {
+    padding: 1rem;
+  }
+
+  .goals-list {
+    font-size: 0.9rem;
+    padding-left: 16px;
+  }
+
+  .brand-name {
+    font-size: 0.9rem;
+  }
+
+  .nav-list a {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+  }
 }
 
 .intro { text-align: left; }
@@ -425,6 +452,24 @@ main {
   box-shadow: 0 6px 16px rgba(79, 70, 229, 0.12);
 }
 
+/* Future Goals Card */
+.future-card {
+  margin-top: 14px;
+}
+
+.goals-list {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 10px;
+  color: rgba(20, 20, 60, 0.75);
+  line-height: 1.5;
+}
+
+.goals-list li {
+  position: relative;
+}
+
 .project { display: grid; grid-template-columns: 1fr; gap: 1rem; align-items: start; text-align: center; }
 .project-image { width: 100%; max-width: 480px; aspect-ratio: 16/9; object-fit: cover; border-radius: 6px; background: #eee; display:block; margin: 0 auto; }
 .project h2 { margin-top: 0; }
@@ -537,6 +582,74 @@ footer {
   body { font-size: 16px; }
   .intro h1 { font-size: 1.25rem; }
   .intro p, .about p, .projects-preview p { font-size: 0.98rem; }
+
+  /* Mobile optimizations for About section */
+  .about {
+    padding: 1.5rem;
+  }
+
+  .about h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-facts {
+    gap: 0.5rem;
+  }
+
+  .fact {
+    font-size: 0.9rem;
+    padding: 0.45rem 0.65rem;
+  }
+
+  /* Future Goals card mobile styling */
+  .future-card {
+    margin-top: 1rem;
+    padding: 1.25rem;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .goals-list {
+    font-size: 0.95rem;
+    gap: 8px;
+    padding-left: 20px;
+  }
+
+  /* Skills card mobile */
+  .skills {
+    padding: 1.25rem;
+  }
+
+  .skills h3 {
+    font-size: 1.2rem;
+  }
+
+  /* Project cards mobile */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .project-card {
+    padding: 1.25rem;
+  }
+
+  /* Header center text hidden on small screens */
+  .header-center {
+    display: none;
+  }
+
+  /* Hero links wrap better on mobile */
+  .hero-links {
+    gap: 0.5rem;
+  }
+
+  .pill {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+  }
 }
 
 /* Ensure images scale properly */
