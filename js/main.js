@@ -49,16 +49,4 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
-
-  // Floating nav appears after scrolling down
-  var floatingNav = document.getElementById('floatingNav');
-  if (floatingNav) {
-    window.addEventListener('scroll', function () {
-      if (window.scrollY > 250) {
-        floatingNav.classList.add('show');
-      } else {
-        floatingNav.classList.remove('show');
-      }
-    });
-  }
 });
